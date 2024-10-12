@@ -1,0 +1,14 @@
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\bin\Debug\net8.0\FormatScaleValue.exe
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\bin\Debug\net8.0\FormatScaleValue.deps.json
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\bin\Debug\net8.0\FormatScaleValue.runtimeconfig.json
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\bin\Debug\net8.0\FormatScaleValue.dll
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\bin\Debug\net8.0\FormatScaleValue.pdb
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\FormatScaleValue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\FormatScaleValue.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\FormatScaleValue.AssemblyInfo.cs
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\FormatScaleValue.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\FormatScaleValue.dll
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\refint\FormatScaleValue.dll
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\FormatScaleValue.pdb
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\FormatScaleValue.genruntimeconfig.cache
+C:\Users\user\source\repos\FormatScaleValue\FormatScaleValue\obj\Debug\net8.0\ref\FormatScaleValue.dll

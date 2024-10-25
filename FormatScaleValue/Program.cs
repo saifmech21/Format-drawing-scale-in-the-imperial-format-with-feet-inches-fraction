@@ -26,11 +26,7 @@
 
 			double scale = 0.3;
 			string formattedScale = "";
-			//formattedScale = DrawingDataFormatting.FormatScaleInImperial(scale);
-			//Console.WriteLine($"Formatted {scale} as {formattedScale}.");
-
-			scale = 0.705;
-			formattedScale = DrawingDataFormatting.FormatScaleInMetric(scale, ":", 3);
+			formattedScale = DrawingDataFormatting.FormatScaleInImperial(scale, " = ", "-", 12, 64);
 			Console.WriteLine($"Formatted {scale} as {formattedScale}.");
 
 		}

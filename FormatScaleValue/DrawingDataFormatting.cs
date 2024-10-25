@@ -1,4 +1,4 @@
-﻿
+
 using static System.Formats.Asn1.AsnWriter;
 
 namespace FormatScaleValue
@@ -32,9 +32,10 @@ namespace FormatScaleValue
 
 			// make sure it's a positive value
 			if (scale <= 0) throw new ArgumentException($"Argument {nameof(scale)} = {scale} was invalid. A non-zero positive quantity was expected.");
+
 			// Validate subdivisions
-			if (subdivisions != 2 && subdivisions != 4 && subdivisions != 8 && subdivisions != 16 && subdivisions != 32 && subdivisions != 64)
-				throw new ArgumentException($"Argument {nameof(subdivisions)} = {subdivisions} was invalid. 2, 4, 8, 16, 32 or 64 was expected.");
+			if (subdivisions < 2 || Math.Log(subdivisions, 2) % 1 != 0 )
+				throw new ArgumentException($"Argument {nameof(subdivisions)} = {subdivisions} was invalid. 2, 4, 8, 16, 32, 64, etc was expected.");
 
 
 			double leftSideInInches = scale * rightSideInInches;
@@ -111,13 +112,13 @@ namespace FormatScaleValue
 		{
 			string strCallDetails = $"{nameof(FormatInchesInFractional)} ({nameof(inches)} = {inches}, {nameof(separator)} = \"{separator}\", {nameof(subdivisions)} = {subdivisions}, {nameof(keepZeroFeet)} = {keepZeroFeet})";
 			string log = strCallDetails + "\n";
-			//Console.WriteLine(log);
+            //Console.WriteLine(log);
 
-			// Validate subdivisions
-			if (subdivisions != 2 && subdivisions != 4 && subdivisions != 8 && subdivisions != 16 && subdivisions != 32 && subdivisions != 64)
-				throw new ArgumentException($"Argument {nameof(subdivisions)} = {subdivisions} was invalid. 2, 4, 8, 16, 32 or 64 was expected.");
+            // Validate subdivisions
+            if (subdivisions < 2 || Math.Log(subdivisions, 2) % 1 != 0)
+                throw new ArgumentException($"Argument {nameof(subdivisions)} = {subdivisions} was invalid. 2, 4, 8, 16, 32, 64, etc was expected.");
 
-			bool wasNegative = false;
+            bool wasNegative = false;
 			if (inches < 0)
 			{
 				wasNegative = true;
@@ -161,8 +162,6 @@ namespace FormatScaleValue
 
 			return output;
 		}
-
-
 
 	}
 }

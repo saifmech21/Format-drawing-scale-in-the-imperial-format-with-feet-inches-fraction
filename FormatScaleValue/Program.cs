@@ -1,36 +1,58 @@
-﻿namespace FormatScaleValue
+namespace FormatScaleValue
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
 
-			string separator = " - ";
-			int subdivisions = 64;
-			bool keepZeroFeet = false;
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(14.74, separator, subdivisions, keepZeroFeet));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(12.5, separator, subdivisions, keepZeroFeet));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(12, separator, subdivisions, keepZeroFeet));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(1.5, separator, subdivisions, keepZeroFeet));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(0.5, separator, subdivisions, keepZeroFeet));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(1, separator, subdivisions, keepZeroFeet));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(0, separator, subdivisions, keepZeroFeet));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(-14.74));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(-12.5));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(-12));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(-1.5));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(-0.5));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(-1));
-			//Console.WriteLine(DrawingDataFormatting.FormatInchesInFractional(-0.01));
+			double input;
+			int subdivisions;
+
+            Console.WriteLine("DECIMAL INCH VALUE TO IMPERIAL REPRESENTATION:");
+            Console.WriteLine($"Subdivisions: 64 (default)\n");
+            for (int i = 1; i <= 150; i++)
+            {
+                input = 0.1 * i;
+                Console.WriteLine($"{i.ToString().PadLeft(3)}. {nameof(ValueFormatting.FormatInchesInImperial)}(({Math.Round(input, 4)})");
+                Console.WriteLine($"     {ValueFormatting.FormatInchesInImperial(input)}\n");
+            }
 
 
-			double scale = 0.3;
-			string formattedScale = "";
-			formattedScale = DrawingDataFormatting.FormatScaleInImperial(scale, " = ", "-", 12, 64);
-			Console.WriteLine($"Formatted {scale} as {formattedScale}.");
+            subdivisions = 128;
+            Console.WriteLine("DECIMAL INCH VALUE TO IMPERIAL REPRESENTATION:");
+            Console.WriteLine($"Subdivisions: {subdivisions}\n");
+            for (int i = 1; i <= 150; i++)
+            {
+                input = 0.1 * i;
+                Console.WriteLine($"{i.ToString().PadLeft(3)}. {nameof(ValueFormatting.FormatInchesInImperial)}(({Math.Round(input, 4)})");
+                Console.WriteLine($"     {ValueFormatting.FormatInchesInImperial(input, subdivisions)}\n");
+            }
 
-		}
-	}
+
+            Console.WriteLine("DECIMAL DECIMAL SCALE TO IMPERIAL REPRESENTATION:");
+            Console.WriteLine($"Subdivisions: 64 (default)\n");
+            for (int i = 1; i <= 150; i++)
+            {
+                input = 0.1 * i;
+                Console.WriteLine($"{i.ToString().PadLeft(3)}. {nameof(ValueFormatting.FormatScaleInImperial)}(({Math.Round(input, 4)})");
+                Console.WriteLine($"     {ValueFormatting.FormatScaleInImperial(input)}\n");
+            }
+
+
+            subdivisions = 128;
+            Console.WriteLine("DECIMAL DECIMAL SCALE TO IMPERIAL REPRESENTATION:");
+            Console.WriteLine($"Subdivisions: {subdivisions}\n");
+            for (int i = 1; i <= 150; i++)
+            {
+                input = 0.1 * i;
+                Console.WriteLine($"{i.ToString().PadLeft(3)}. {nameof(ValueFormatting.FormatScaleInImperial)}(({Math.Round(input, 4)})");
+                Console.WriteLine($"     {ValueFormatting.FormatScaleInImperial(input, subdivisions)}\n");
+            }
+
+
+
+        }
+    }
 }
 
 
